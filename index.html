@@ -35,8 +35,8 @@
       </section>
       <section class="panel" id="panel-finance">
         <div class="section-heading"><div><span class="eyebrow">PLANEJAMENTO FINANCEIRO</span><h2>Nosso orçamento</h2><p class="muted">Meta total da viagem</p></div></div>
-        <div class="money-hero"><div class="budget-heading"><span>ORÇAMENTO PLANEJADO</span><details id="budgetDetails"><summary>Editar</summary><form id="budgetForm" class="budget-edit"><label for="budgetInput">Novo orçamento (R$)</label><input id="budgetInput" type="number" min="0.01" step="0.01" required><button class="receive-button" type="submit">Salvar</button></form></details></div><strong id="goalValue">R$ 16.339,31</strong><div class="progress"><i id="fundProgress"></i></div><small id="fundCaption">Acompanhe as entradas até a viagem</small></div>
-        <div class="metric-grid"><article><small>Saldo atual</small><b id="balanceValue">R$ 0,00</b></article><article><small>Total recebido</small><b id="incomeValue">R$ 1.000,00</b></article><article><small>Total gasto</small><b id="expenseValue">R$ 1.000,00</b></article><article><small>Previsto a receber</small><b id="remainingValue">R$ 15.339,31</b></article></div>
+        <div class="money-hero"><span>ORÇAMENTO PLANEJADO · A RECEBER + RECEBIDO</span><strong id="goalValue">R$ 16.339,31</strong><div class="progress"><i id="fundProgress"></i></div><small id="fundCaption">Acompanhe as entradas até a viagem</small></div>
+        <div class="metric-grid"><article><small>Saldo atual</small><b id="balanceValue">R$ 0,00</b></article><article><small>Total recebido</small><b id="incomeValue">R$ 1.000,00</b></article><article><small>Total gasto</small><b id="expenseValue">R$ 1.000,00</b></article><article><small>A receber</small><b id="remainingValue">R$ 15.339,31</b></article></div>
         <div class="reserve-note"><span>✧</span><div><b>Reserva de emergência · R$ 404,31</b><small>Separada do orçamento operacional. Pode ser realocada depois.</small></div></div>
         <div class="section-heading list-heading"><div><span class="eyebrow">PLANEJAMENTO DE ENTRADAS</span><h2>A receber</h2></div></div>
         <div id="plannedIncomes" class="planned-list"></div>
@@ -53,7 +53,7 @@
           <button class="primary-button" type="submit">+ Adicionar movimentação</button>
         </form>
         <div id="transactions" class="transaction-list"></div>
-        <p class="footnote">Os R$ 1.000,00 anteriores estão registrados como entrada e despesa histórica; por isso, o saldo atual começa em R$ 0,00. A previsão inicial de R$ 15.339,31 pode ser editada, dividida em entradas menores ou complementada.</p>
+        <p class="footnote">Os R$ 1.000,00 anteriores estão registrados como entrada e despesa histórica; por isso, o saldo atual começa em R$ 0,00. O orçamento planejado é calculado automaticamente pela soma do que já foi recebido com as entradas ainda previstas.</p>
       </section>
       <section class="panel" id="panel-reservations">
         <div class="section-heading"><div><span class="eyebrow">TUDO EM UM SÓ LUGAR</span><h2>Reservas e documentos</h2><p class="muted">Registrem hospedagens, passeios e comprovantes.</p></div></div>
