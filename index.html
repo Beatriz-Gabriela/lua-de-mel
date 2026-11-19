@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123b43"><meta name="description" content="Planejamento da viagem de Ano Novo: roteiro, reservas e orçamento.">
+  <link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
+  <title>Lua de Mel · Nossa viagem</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar"><a class="brand" href="#" aria-label="Início"><span class="brand-mark">✳</span><span><b>nossa viagem</b><small>ALAGOAS · PERNAMBUCO</small></span></a><button class="icon-button" id="installBtn" hidden aria-label="Instalar aplicativo">↓</button></header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy"><span class="eyebrow">CONTAGEM REGRESSIVA</span><h1>O melhor está<br><em>por vir.</em></h1><p>Uma viagem a dois, muitos lugares para descobrir.</p></div>
+        <div class="countdown"><strong id="daysLeft">—</strong><span>DIAS</span><small>para a nossa viagem</small></div>
+        <div class="hero-sun"></div>
+      </section>
+      <nav class="tabs" aria-label="Navegação"><button class="tab active" data-tab="home">Início</button><button class="tab" data-tab="itinerary">Roteiro</button><button class="tab" data-tab="finance">Financeiro</button><button class="tab" data-tab="reservations">Reservas</button></nav>
+      <section class="panel active" id="panel-home">
+        <div class="section-heading"><div><span class="eyebrow">30 DEZ 2026 — 10 JAN 2027</span><h2>O plano da viagem</h2></div><span class="pill">12 dias · 3 destinos</span></div>
+        <div class="destination-grid">
+          <article class="destination d1"><span>01 · 30 DEZ — 03 JAN</span><h3>Maceió</h3><p>Mar azul, descanso e Réveillon.</p></article>
+          <article class="destination d2"><span>02 · 03 — 06 JAN</span><h3>Porto de Galinhas</h3><p>Piscinas naturais e passeios.</p></article>
+          <article class="destination d3"><span>03 · 06 — 09 JAN</span><h3>Recife · Boa Viagem</h3><p>Cultura, gastronomia e praia.</p></article>
+        </div>
+        <div class="quick-grid"><button class="quick-card" data-go="itinerary"><span>✦</span><b>Montar roteiro</b><small>Escolha o que querem conhecer</small></button><button class="quick-card" data-go="finance"><span>↗</span><b>Acompanhar orçamento</b><small>Entradas, gastos e saldo</small></button></div>
+        <div class="flight-strip"><span class="flight-icon">✈</span><div><b>Ida · Manaus → Maceió</b><small>29/12/2026 · 16:35 → 30/12 · 02:00</small></div><span class="flight-icon">✈</span><div><b>Volta · Maceió → Manaus</b><small>09/01/2027 · 18:55 → 10/01 · 01:35</small></div></div>
+      </section>
+      <section class="panel" id="panel-itinerary">
+        <div class="section-heading"><div><span class="eyebrow">DESCUBRAM JUNTOS</span><h2>Nosso roteiro</h2><p class="muted">Escolham os lugares que querem visitar. O roteiro é de vocês.</p></div></div>
+        <div class="filters" id="destinationFilters"><button class="filter active" data-destination="Todos">Todos</button><button class="filter" data-destination="Maceió">Maceió</button><button class="filter" data-destination="Porto de Galinhas">Porto de Galinhas</button><button class="filter" data-destination="Recife">Recife</button></div>
+        <div id="suggestions" class="suggestion-list"></div>
+        <div class="section-heading list-heading"><div><span class="eyebrow">SELECIONADOS</span><h2>O que vamos fazer</h2></div><span class="pill" id="itineraryCount">0 lugares</span></div>
+        <div id="myItinerary" class="saved-list empty-state">Adicionem os lugares que mais gostarem para montar o roteiro.</div>
+      </section>
+      <section class="panel" id="panel-finance">
+        <div class="section-heading"><div><span class="eyebrow">PLANEJAMENTO FINANCEIRO</span><h2>Nosso orçamento</h2><p class="muted">Meta total da viagem</p></div></div>
+        <div class="money-hero"><span>ORÇAMENTO PLANEJADO</span><strong id="goalValue">R$ 16.339,31</strong><div class="progress"><i id="fundProgress"></i></div><small id="fundCaption">Acompanhe as entradas até a viagem</small></div>
+        <div class="metric-grid"><article><small>Saldo atual</small><b id="balanceValue">R$ 0,00</b></article><article><small>Total recebido</small><b id="incomeValue">R$ 1.000,00</b></article><article><small>Total gasto</small><b id="expenseValue">R$ 1.000,00</b></article><article><small>Falta receber</small><b id="remainingValue">R$ 15.339,31</b></article></div>
+        <div class="reserve-note"><span>✧</span><div><b>Reserva de emergência · R$ 404,31</b><small>Separada do orçamento operacional. Pode ser realocada depois.</small></div></div>
+        <div class="section-heading list-heading"><div><span class="eyebrow">MOVIMENTAÇÕES</span><h2>Entradas e despesas</h2></div></div>
+        <form id="transactionForm" class="entry-form">
+          <div class="form-row"><label>Tipo<select id="txType"><option value="income">Entrada</option><option value="expense">Despesa</option></select></label><label>Valor (R$)<input id="txAmount" type="number" min="0.01" step="0.01" placeholder="0,00" required></label></div>
+          <div class="form-row"><label>Descrição<input id="txDescription" maxlength="70" placeholder="Ex.: 13º, passeio, alimentação" required></label><label>Data<input id="txDate" type="date" required></label></div>
+          <button class="primary-button" type="submit">+ Adicionar movimentação</button>
+        </form>
+        <div id="transactions" class="transaction-list"></div>
+        <p class="footnote">Os R$ 1.000,00 anteriores estão registrados como entrada e despesa histórica; por isso, o saldo atual começa em R$ 0,00. Previsão de completar as entradas: 23/12/2026.</p>
+      </section>
+      <section class="panel" id="panel-reservations">
+        <div class="section-heading"><div><span class="eyebrow">TUDO EM UM SÓ LUGAR</span><h2>Reservas e documentos</h2><p class="muted">Registrem hospedagens, passeios e comprovantes.</p></div></div>
+        <div class="reservation-card"><span class="reservation-icon">✈</span><div><b>Passagens aéreas</b><small>Compradas · Manaus ⇄ Maceió</small><p>Ida: 29/12/2026 às 16:35<br>Volta: 09/01/2027 às 18:55</p></div><span class="status done">Compradas</span></div>
+        <div class="reservation-card"><span class="reservation-icon">⌂</span><div><b>Hospedagens</b><small>Reservas realizadas · pagamento no destino</small><p>Incluam aqui os detalhes e valores de cada hospedagem.</p></div><span class="status pending">Conferir</span></div>
+        <div class="reservation-card"><span class="reservation-icon">☼</span><div><b>Passeios e experiências</b><small>Adicionem passeios já comprados ou planejados.</small><p>Os valores pagos antecipadamente também podem ser lançados no Financeiro.</p></div><span class="status pending">Organizar</span></div>
+        <form id="reservationForm" class="entry-form">
+          <h3>Adicionar reserva</h3><label>O que foi reservado?<input id="resName" placeholder="Ex.: passeio de jangada" required></label>
+          <div class="form-row"><label>Destino<input id="resPlace" placeholder="Ex.: Maceió"></label><label>Status<select id="resStatus"><option>Confirmada</option><option>Pendente</option><option>Cancelada</option></select></label></div>
+          <label>Detalhes / link / código<input id="resDetails" placeholder="Localizador, horário ou observação"></label>
+          <button class="primary-button" type="submit">+ Salvar reserva</button>
+        </form><div id="extraReservations" class="transaction-list"></div>
+      </section>
+    </main>
+    <footer>Feito para guardar os planos de uma viagem especial <span>✳</span></footer>
+  </div>
+  <script src="./app.js"></script>
+</body></html>
