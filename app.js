@@ -1,4 +1,4 @@
-const TRIP_DATE = new Date('2026-12-30T00:00:00');
+const TRIP_DATE = new Date('2026-12-29T16:35:00');
 const GOAL = 16339.31;
 const RESERVE = 404.31;
 const KEY = 'lua-de-mel-v1';
