@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#172236"><meta name="description" content="Planejamento da viagem de Ano Novo: roteiro, reservas e orçamento.">
+  <meta name="theme-color" content="#03172a"><meta name="description" content="Planejamento da viagem de Ano Novo: roteiro, reservas e orçamento.">
   <link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
-  <title>Lua de Mel · Nossa viagem</title>
+  <title>Lua</title>
 </head>
 <body>
   <div class="app-shell">
-    <header class="topbar"><a class="brand" href="#" aria-label="Início"><span class="brand-mark">✳</span><span><b>nossa viagem</b><small>ALAGOAS · PERNAMBUCO</small></span></a><button class="icon-button" id="installBtn" hidden aria-label="Instalar aplicativo">↓</button></header>
+    <header class="topbar"><a class="brand" href="#" aria-label="Início"><span class="brand-mark" aria-hidden="true">☾</span><span><b>Lua</b><small>NOSSA VIAGEM</small></span></a><button class="icon-button" id="installBtn" hidden aria-label="Instalar aplicativo">↓</button></header>
     <main>
       <section class="hero">
         <div class="hero-copy"><span class="eyebrow">CONTAGEM REGRESSIVA</span><h1>O melhor está<br><em>por vir.</em></h1><p>Uma viagem a dois, muitos lugares para descobrir.</p></div>
@@ -63,12 +63,15 @@
         <form id="reservationForm" class="entry-form">
           <h3>Adicionar reserva</h3><label>O que foi reservado?<input id="resName" placeholder="Ex.: passeio de jangada" required></label>
           <div class="form-row"><label>Destino<input id="resPlace" placeholder="Ex.: Maceió"></label><label>Status<select id="resStatus"><option>Confirmada</option><option>Pendente</option><option>Cancelada</option></select></label></div>
-          <label>Detalhes / link / código<input id="resDetails" placeholder="Localizador, horário ou observação"></label>
+          <label>Detalhes / código<input id="resDetails" placeholder="Localizador, horário ou observação"></label>
+          <label>Link da reserva ou documento (opcional)<input id="resLink" type="url" placeholder="https://..."></label>
+          <label>Anexar arquivos (opcional)<input id="resFiles" type="file" multiple accept=".pdf,.png,.jpg,.jpeg,.webp,.doc,.docx,.xls,.xlsx"></label>
+          <small class="form-hint">PDF, imagens e documentos · até 10 MB por arquivo. Os arquivos ficam salvos neste dispositivo.</small>
           <button class="primary-button" type="submit">+ Salvar reserva</button>
         </form><div id="extraReservations" class="transaction-list"></div>
       </section>
     </main>
-    <footer>Feito para guardar os planos de uma viagem especial <span>✳</span></footer>
+    <footer>Feito para guardar os planos de uma viagem especial <span>☾</span></footer>
   </div>
   <script src="./app.js"></script>
 </body></html>
