@@ -126,3 +126,39 @@ footer span{color:var(--coral)}
   .metric-grid article{border-radius:13px}
   .suggestion,.saved-item,.transaction,.reservation-card{border-radius:13px}
 }
+
+
+/* LUA · paleta oficial */
+:root{
+  --navy:#264453;
+  --deep:#03172a;
+  --aqua:#264453;
+  --sand:#ffffff;
+  --cream:#ffffff;
+  --coral:#e35336;
+  --ink:#03172a;
+  --muted:#667780;
+  --line:#e3e8eb;
+  --white:#ffffff;
+}
+body{background:#fff;color:#03172a}
+.brand{color:#03172a}
+.brand-mark{background:#03172a;color:#fff;font-size:27px}
+.hero{background:linear-gradient(115deg,#03172a 0%,#264453 100%)}
+.hero .eyebrow{color:#fff}
+.hero h1 em,.countdown strong{color:#e35336}
+.tab.active,.filter.active{background:#264453;border-color:#264453}
+.section-heading h2,.metric-grid b{color:#03172a}
+.money-hero{background:linear-gradient(115deg,#03172a,#264453)}
+.primary-button{background:#e35336}
+.quick-card>span,.flight-icon,.footer span{color:#e35336}
+.destination.d1{background:#264453}
+.destination.d2{background:#e35336}
+.destination.d3{background:#03172a}
+.reservation-icon,.place-dot,.add-button{background:#f7eeec;color:#e35336}
+.reservation-attachments{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.reservation-attachments a{display:inline-flex;align-items:center;gap:5px;border:1px solid #e3e8eb;border-radius:8px;padding:7px 9px;color:#264453;text-decoration:none;font-size:10px;font-weight:600;overflow-wrap:anywhere}
+.reservation-attachments a:hover{border-color:#e35336;color:#e35336}
+.form-hint{font-size:10px;color:#667780;line-height:1.5}
+input[type=file]{padding:9px;background:#fff}
+@media(max-width:650px){.reservation-attachments a{font-size:9px}}
