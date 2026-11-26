@@ -171,7 +171,7 @@ body,button,input,select,textarea{font-family:var(--font-ui)!important}
 body{font-size:14px}
 .brand b,.section-heading h2,.destination h3,.hero h1,.countdown strong,.money-hero strong,.entry-form h3{font-family:var(--font-ui)!important;font-weight:800}
 .hero{
- background-image:linear-gradient(90deg,rgba(3,23,42,.82) 0%,rgba(3,23,42,.46) 58%,rgba(3,23,42,.12) 100%),url('https://images.unsplash.com/photo-1768486173251-95f16f855830?auto=format&fit=crop&fm=jpg&q=85&w=2200');
+ background-image:linear-gradient(90deg,rgba(3,23,42,.82) 0%,rgba(3,23,42,.46) 58%,rgba(3,23,42,.12) 100%),url('https://www.civitatis.com/blog/wp-content/uploads/2025/05/shutterstock_2570853073-1280x799.jpg');
  background-position:center 52%;background-size:cover;
 }
 .hero-sun{display:none}
@@ -180,7 +180,7 @@ body{font-size:14px}
 .destination{background-size:cover!important;background-position:center!important;isolation:isolate;min-height:185px}
 .destination:before{display:none}
 .destination:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,23,42,.86),rgba(3,23,42,.08) 85%)}
-.destination.d1{background-image:url('https://maceio.al.gov.br/transform/imagens/_850x560_crop_center-center_none/6APNyl2Q.jpeg')}
+.destination.d1{background-image:url('https://skylineplane.com.br/wp-content/uploads/2022/03/maceio-praia-de-Pajucara.jpg')}
 .destination.d2{background-image:url('https://beachsearcher.com/images/beaches/76202225/BR202225.jpg')}
 .destination.d3{background-image:url('https://www.ncl.com/adobe/dynamicmedia/deliver/dm-aid--bf08d7fe-b7f8-4132-b29e-42c4f8b1d8e7/ncl-brazil-recife-cruise-boa-viagem-beach.jpg?preferwebp=true&quality=85')}
 .destination span,.destination h3,.destination p{z-index:1;text-shadow:0 1px 8px #03172a80}
