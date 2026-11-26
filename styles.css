@@ -162,3 +162,36 @@ body{background:#fff;color:#03172a}
 .form-hint{font-size:10px;color:#667780;line-height:1.5}
 input[type=file]{padding:9px;background:#fff}
 @media(max-width:650px){.reservation-attachments a{font-size:9px}}
+
+
+/* LUA · visual mais leve, acolhedor e fotográfico */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+:root{--font-ui:'Nunito',sans-serif}
+body,button,input,select,textarea{font-family:var(--font-ui)!important}
+body{font-size:14px}
+.brand b,.section-heading h2,.destination h3,.hero h1,.countdown strong,.money-hero strong,.entry-form h3{font-family:var(--font-ui)!important;font-weight:800}
+.hero{
+ background-image:linear-gradient(90deg,rgba(3,23,42,.82) 0%,rgba(3,23,42,.46) 58%,rgba(3,23,42,.12) 100%),url('https://images.unsplash.com/photo-1768486173251-95f16f855830?auto=format&fit=crop&fm=jpg&q=85&w=2200');
+ background-position:center 52%;background-size:cover;
+}
+.hero-sun{display:none}
+.hero h1{font-size:clamp(36px,5vw,50px);letter-spacing:-.035em}
+.hero p{font-weight:600}
+.destination{background-size:cover!important;background-position:center!important;isolation:isolate;min-height:185px}
+.destination:before{display:none}
+.destination:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,23,42,.86),rgba(3,23,42,.08) 85%)}
+.destination.d1{background-image:url('https://maceio.al.gov.br/transform/imagens/_850x560_crop_center-center_none/6APNyl2Q.jpeg')}
+.destination.d2{background-image:url('https://beachsearcher.com/images/beaches/76202225/BR202225.jpg')}
+.destination.d3{background-image:url('https://www.ncl.com/adobe/dynamicmedia/deliver/dm-aid--bf08d7fe-b7f8-4132-b29e-42c4f8b1d8e7/ncl-brazil-recife-cruise-boa-viagem-beach.jpg?preferwebp=true&quality=85')}
+.destination span,.destination h3,.destination p{z-index:1;text-shadow:0 1px 8px #03172a80}
+.destination h3{font-size:25px;letter-spacing:-.02em}
+.destination p{font-weight:600}
+.receive-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:10px;padding:9px 14px;background:#e35336;color:#fff;font:800 12px var(--font-ui);box-shadow:0 3px 9px #e3533628;cursor:pointer;white-space:nowrap;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease}
+.receive-button span{font-size:14px;line-height:1}
+.receive-button:hover{filter:brightness(.96);transform:translateY(-1px);box-shadow:0 5px 13px #e3533638}
+.receive-button:active{transform:scale(.97)}
+.planned-item{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.planned-actions{display:flex;align-items:center;gap:7px;margin-left:auto}
+.planned-actions .delete-button{flex-shrink:0}
+.edit-plan-button{font:700 11px var(--font-ui)!important;border-radius:10px;padding:9px 12px}
+@media(max-width:650px){.hero{background-position:center;background-size:cover}.destination{min-height:142px}.planned-item{gap:9px}.planned-actions{width:100%;justify-content:flex-end}.receive-button{padding:9px 13px}}
